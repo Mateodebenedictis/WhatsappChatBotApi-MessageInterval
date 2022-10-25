@@ -21,14 +21,23 @@ const correrCodigoAlas23 = () => {
     date.setHours( date.getHours() - 3);
 
     const hour = date.getHours();
-    const minute = date.getMinutes();
 
     if(hour === 23 && yaSeEjecuto == false){
 
-        let url = `https://api.callmebot.com/whatsapp.php?phone=5491133521081&text=Clarita+son+las+${date.toLocaleTimeString()}+${elegirFrase()}&apikey=9497027`
-
+        let url = `https://api.callmebot.com/whatsapp.php?phone=5491133521081&text=Mateo+son+las+${date.toLocaleTimeString()}+${elegirFrase()}&apikey=9497027`
+        let url_clari = `https://api.callmebot.com/whatsapp.php?phone=5491136328326&text=Clarita+son+las+${date.toLocaleTimeString()}+${elegirFrase()}&apikey=1418364`
         yaSeEjecuto = true;
 
+        //MENSAJE PARA CLARI
+        axios.get(url_clari)
+        .then((response) => {
+            console.log(response.data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+        
+        //MENSAJE PARA MATEO
         axios.get(url)
         .then((response) => {
             console.log(response.data);
@@ -36,7 +45,6 @@ const correrCodigoAlas23 = () => {
         .catch((error) => {
             console.log(error);
         });
-
     } 
     
     if(hour !== 23){
