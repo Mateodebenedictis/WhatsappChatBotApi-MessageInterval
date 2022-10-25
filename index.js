@@ -7,7 +7,7 @@ const correrCodigoAlas23 = () => {
     const hour = date.getHours();
     const minute = date.getMinutes();
 
-    if(hour === 18 && yaSeEjecuto == false){
+    //if(hour === 18 && yaSeEjecuto == false){
 
         let url = `https://api.callmebot.com/whatsapp.php?phone=5491133521081&text=Clarita+son+las+${hour + ':' + minute}+tenes+que+tomar+la+pastilla+%F0%9F%92%8A&apikey=9497027`
 
@@ -21,7 +21,7 @@ const correrCodigoAlas23 = () => {
             console.log(error);
         });
 
-    } 
+    //} 
     
     if(hour !== 18){
         yaSeEjecuto = false;
