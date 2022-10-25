@@ -14,7 +14,7 @@ const elegirFrase = () => {
 };
 
 //FUNCION REAL
-/*
+
 const correrCodigoAlas23 = () => {
 
     let date = new Date();
@@ -25,7 +25,7 @@ const correrCodigoAlas23 = () => {
 
     if(hour === 23 && yaSeEjecuto == false){
 
-        let url = `https://api.callmebot.com/whatsapp.php?phone=5491133521081&text=Clarita+son+las+${hour + ':' + minute}+tenes+que+tomar+la+pastilla+%F0%9F%92%8A&apikey=9497027`
+        let url = `https://api.callmebot.com/whatsapp.php?phone=5491133521081&text=Clarita+son+las+${date.toLocaleTimeString()}+${elegirFrase()}&apikey=9497027`
 
         yaSeEjecuto = true;
 
@@ -45,9 +45,10 @@ const correrCodigoAlas23 = () => {
     }
 
 };
-*/
+
 
 //FUNCION DE PRUEBA
+/*
 const correrCodigoAlas23 = () => {
 
     let date = new Date();
@@ -78,11 +79,11 @@ const correrCodigoAlas23 = () => {
     }
 
 };
-
+*/
 
 //INTERVALO DE PRUEBA CADA 20 SEGUNDOS
-let intervalo = setInterval(correrCodigoAlas23, 20000);
+//let intervalo = setInterval(correrCodigoAlas23, 20000);
 
 //INTERVALO REAL CADA 30 MINUTOS
-// let intervalo = setInterval(correrCodigoAlas23, 1800000);
+let intervalo = setInterval(correrCodigoAlas23, 1800000);
 
