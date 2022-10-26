@@ -30,7 +30,7 @@ const correrCodigoAlas23 = () => {
 
     const hour = date.getHours();
 
-    if(hour === 21 && yaSeEjecuto == false){
+    if(hour === 22 && yaSeEjecuto == false){
 
         let url = `https://api.callmebot.com/whatsapp.php?phone=5491133521081&text=Mateo+son+las+${date.toLocaleTimeString()}+${elegirFrase()}&apikey=9497027`
         //let url_clari = `https://api.callmebot.com/whatsapp.php?phone=5491136328326&text=Clarita+son+las+${date.toLocaleTimeString()}+${elegirFrase()}&apikey=1418364`
@@ -50,7 +50,7 @@ const correrCodigoAlas23 = () => {
     } 
 
     
-    if(hour !== 21){
+    if(hour !== 22){
         yaSeEjecuto = false;
         console.log('No es la hora');
     }
